@@ -1,0 +1,8 @@
+.tools/
+.out/
+.superpowers/
+docs/superpowers/plans/
+node_modules/
+.env*
+*.rbxl
+*.rbxlx

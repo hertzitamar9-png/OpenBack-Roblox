@@ -1,0 +1,11 @@
+{
+  "name": "openback-roblox",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Isolated native Roblox foundation; not a published game",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node tools/build.mjs"
+  }
+}
