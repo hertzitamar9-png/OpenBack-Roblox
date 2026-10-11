@@ -1,3 +1,12 @@
+## OpenBack v0.35.2 - Roblox Duel Prototype
+
+- Find another player in the same Roblox server for a two-player conquest duel, or cancel the search and play solo.
+- Both players see the same server-owned territory and resources. Your colour and opponent are shown in the match controls; neither player can issue orders for the other side.
+- Leaving an active duel awards the remaining player victory. Finished matches offer another opponent search, and empty matches are cleaned up.
+- This remains an incomplete Roblox prototype, not a public release. Full strategy systems, tutorial, reconnect support and Robux purchases remain in development. Regular OpenBack is unchanged.
+
+Created by **frootz jhklphy**.
+
 ## OpenBack v0.35.1 - Roblox Solo Conquest Prototype
 
 - Start a native solo conquest prototype against a deterministic opponent on a newly authored river-crossing board. Click or tap neighbouring land to expand.

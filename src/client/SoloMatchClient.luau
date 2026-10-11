@@ -11,6 +11,7 @@ function Solo.mount(gui,status,toggle,header)
   if not remote or not gui.Parent then return end
   local connections = {}
   local board, state
+  local queued = false
   local tiles = {}
   local colours = {[-1]=Color3.fromRGB(45,108,144),[0]=Color3.fromRGB(116,150,107),[1]=Color3.fromRGB(57,151,221),[2]=Color3.fromRGB(224,91,76)}
   local footer = Instance.new("Frame")
@@ -22,7 +23,7 @@ function Solo.mount(gui,status,toggle,header)
   info.Position = UDim2.fromOffset(12,8); info.Size = UDim2.new(1,-24,0,48)
   info.BackgroundTransparency = 1; info.TextWrapped = true; info.Font = Enum.Font.Gotham
   info.TextSize = 13; info.TextColor3 = Color3.fromRGB(230,240,245)
-  info.Text = "Solo conquest prototype\nConstruction, naval units and multiplayer are not available yet."; info.Parent = footer
+  info.Text = "Conquest prototype · Solo or two-player duel\nDuels match players in this server. Construction and naval units are not available yet."; info.Parent = footer
   local function button(label,x)
     local result = Instance.new("TextButton")
     result.Size = UDim2.new(0.5,-18,0,48); result.Position = UDim2.new(x,if x == 0 then 12 else 6,0,60)
@@ -33,6 +34,7 @@ function Solo.mount(gui,status,toggle,header)
   end
   local start = button("Play solo prototype",0)
   local exit = button("Back to showcase",0.5); exit.Visible = false
+  local duel = button("Find opponent",0.5)
   local function connect(signal,callback) table.insert(connections,signal:Connect(callback)) end
   local compact, buttonY, orderMessage = false,60,"Blue is yours. Tap neighbouring land."
   local function layout()
@@ -40,6 +42,7 @@ function Solo.mount(gui,status,toggle,header)
     footer.Size = UDim2.new(1,-24,0,if compact then 60 else 116)
     info.Visible = not compact
     start.Position = UDim2.fromOffset(12,buttonY); exit.Position = UDim2.new(0.5,6,0,buttonY)
+    duel.Position = UDim2.new(0.5,6,0,buttonY)
     if state then toggle.Position = UDim2.fromOffset(12,buttonY) end
   end
   connect(gui:GetPropertyChangedSignal("AbsoluteSize"),layout); layout()
@@ -55,15 +58,20 @@ function Solo.mount(gui,status,toggle,header)
     if board then board:Destroy(); board = nil end
     table.clear(tiles); showcase(true)
   end
-  connect(remote.OnClientEvent,function(snapshot,message)
+  connect(remote.OnClientEvent,function(snapshot,message,meta)
+    local previousId = state and state.matchId
     state = snapshot
+    queued = meta and meta.queued == true
     if not state then
       toggle.Parent = header; toggle.Visible = true; gui:SetAttribute("MatchActive",false)
-      clear(); start.Text = "Play solo prototype"; start.Visible = true; exit.Visible = false
-      status.Text = "Roblox unit showcase — solo prototype available below.\nCreated by frootz jhklphy."
-      info.Text = "Solo conquest prototype\nConstruction, naval units and multiplayer are not available yet."
+      clear(); start.Text = "Play solo prototype"; start.Visible = not queued; exit.Visible = queued
+      exit.Text = "Cancel search"; duel.Visible = not queued
+      status.Text = if queued then "Waiting for an opponent in this server.\nYou can cancel using the button below." else "Roblox unit showcase — solo and duel prototypes below.\nCreated by frootz jhklphy."
+      info.Text = if queued then "Waiting for another player to press Find opponent.\nThis queue does not search other Roblox servers." else "Conquest prototype · Solo or two-player duel\nConstruction and naval units are not available yet."
       return
     end
+    if previousId and previousId ~= state.matchId then clear() end
+    duel.Visible = false; exit.Text = "Back to showcase"
     toggle.Parent = footer; toggle.Position = UDim2.fromOffset(12,buttonY); toggle.Size = UDim2.new(0.5,-18,0,48)
     toggle.Visible = not state.finished; gui:SetAttribute("MatchActive",true)
     if not board then
@@ -81,17 +89,25 @@ function Solo.mount(gui,status,toggle,header)
       board.Parent = workspace
     end
     for id,owner in state.tiles do tiles[id].Color = colours[owner] end
-    start.Visible = state.finished; start.Text = "Play again"; exit.Visible = true
-    local a,b = state.players[1],state.players[2]
-    info.Text = string.format("You: %d troops · %d gold  |  Bot: %d troops\n%d:%02d / 10:00",a.troops,a.gold,b.troops,math.floor(state.tick/60),state.tick%60)
+    start.Visible = state.finished; start.Text = if state.mode == "duel" then "Find next opponent" else "Play again"; exit.Visible = true
+    local seat = state.seat or 1
+    local a,b = state.players[seat],state.players[3-seat]
+    local opponent = if state.mode == "duel" then "Opponent" else "Bot"
+    local colour = if seat == 1 then "Blue" else "Red"
+    info.Text = string.format("You (%s): %d troops · %d gold  |  %s: %d troops\n%d:%02d / 10:00",colour,a.troops,a.gold,opponent,b.troops,math.floor(state.tick/60),state.tick%60)
     if state.finished then
-      status.Text = (if state.winner == 1 then "Victory!" else if state.winner == 0 then "Draw." else "Defeat.").." Play again or return to the showcase."
+      status.Text = (if state.winner == seat then "Victory!" else if state.winner == 0 then "Draw." else "Defeat.").." "..(state.reason or "Match finished.").." Play again or return to the showcase."
     else
+      if previousId ~= state.matchId then orderMessage = colour.." is yours. Tap neighbouring land." end
       if message then orderMessage = message end
-      status.Text = if compact then string.format("You: %d troops · %d gold  |  Bot: %d troops · %d:%02d\n%s",a.troops,a.gold,b.troops,math.floor(state.tick/60),state.tick%60,orderMessage) else orderMessage.."\nSolo conquest prototype — no purchases."
+      status.Text = if compact then string.format("You (%s): %d troops · %d gold | %s: %d · %d:%02d\n%s",colour,a.troops,a.gold,opponent,b.troops,math.floor(state.tick/60),state.tick%60,orderMessage) else orderMessage.."\nConquest prototype — no purchases."
     end
   end)
-  connect(start.Activated,function() if state and not state.finished then return end; clear(); remote:FireServer("start") end)
+  connect(start.Activated,function()
+    if queued or (state and not state.finished) then return end
+    remote:FireServer(if state and state.mode == "duel" then "queue" else "start")
+  end)
+  connect(duel.Activated,function() if not state and not queued then remote:FireServer("queue") end end)
   connect(exit.Activated,function() remote:FireServer("exit") end)
   local function attack(position,kind)
     if not board or not state or state.finished or not workspace.CurrentCamera then return end

@@ -102,7 +102,7 @@
     },
     {
       "path": "src/client/SoloMatchClient.luau",
-      "sha256": "a8246deba275f061cb546bfd20b0a03d181f8db34ef3ad5598dcc42d99390d56",
+      "sha256": "782f0fa2320881c05d00ecdc38de937eacd952e77bb9ba2404c5515a7ab3e241",
       "creator": "frootz jhklphy",
       "origin": "newly-authored",
       "license": "owner-controlled",
@@ -122,7 +122,17 @@
     },
     {
       "path": "src/server/SoloMatches.server.luau",
-      "sha256": "815973d028838be84ed6b3a1d6299d32875fe749f4f1b6d8668dd735c9297a71",
+      "sha256": "bc5d517325733fc45a9f5af2bb78eabb3e8c725e66bbff97800b2e7959332637",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": ["RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."],
+      "permittedUses": ["roblox-bundle"]
+    },
+    {
+      "path": "src/shared/MatchSessions.luau",
+      "sha256": "0d183d80ff0e80f0d853179d062c242cf4940b00fc6db53288417d9b883a0850",
       "creator": "frootz jhklphy",
       "origin": "newly-authored",
       "license": "owner-controlled",

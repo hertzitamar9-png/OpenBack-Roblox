@@ -5,10 +5,14 @@ maintained for **frootz jhklphy**. Intended Roblox owner: `itapita_rules`.
 
 ## Status
 
-This repository contains a Roblox-native foundation and an early solo conquest
+This repository contains a Roblox-native foundation and early solo/duel conquest
 prototype: ten original primitive-part unit designs, an original island showcase,
 overhead/3D views and a safe-area-aware interface. The solo rules provide server-owned
 territory capture, troop/gold income, a deterministic opponent and match outcomes.
+Two-player duels pair players in the same server with shared authoritative state,
+queue cancellation, separate player seats and victory when an opponent leaves.
+Cross-server matchmaking and reconnect grace are not implemented. The duel logic
+has automated coverage; a live two-client Studio acceptance test remains pending.
 A guarded local place export succeeds. This is not the complete OpenBack port
 and has not been published to Roblox. Earlier foundation-only local Studio
 playtests verified initialization, both views and stop/restart. Separate engine
