@@ -1,0 +1,9 @@
+{
+  "name": "OpenBackRobloxFoundation",
+  "tree": {
+    "$className": "DataModel",
+    "ReplicatedStorage": { "OpenBack": { "$path": "src/shared" } },
+    "ServerScriptService": { "OpenBack": { "$path": "src/server" } },
+    "StarterPlayer": { "StarterPlayerScripts": { "OpenBack": { "$path": "src/client" } } }
+  }
+}

@@ -1,5 +1,132 @@
 {
   "schemaVersion": 1,
   "notice": "Technical bundle approval is not legal clearance. No original game assets are approved for import.",
-  "entries": []
+  "entries": [
+    {
+      "path": "default.project.json",
+      "sha256": "bfd66520fc68cfc0c8c0860af0a999cfe4cae36c9ba14e5aeb191ec15e660d86",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    },
+    {
+      "path": "src/client/CameraController.luau",
+      "sha256": "047106d7c9f14062d5a7c4e54868fa225810e0f78e9fdefec7f5cc2b830fb137",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    },
+    {
+      "path": "src/client/Foundation.client.luau",
+      "sha256": "71276877460a582f31afe9babb6a760ea114dbff5903a0e3614741b66cd3f506",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    },
+    {
+      "path": "src/server/BuildDemoMap.luau",
+      "sha256": "a1e6cfecfe19b927f8d0ebdc48795a97886a3891eecbc02a5f640e19b672e142",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    },
+    {
+      "path": "src/server/BuildUnit.luau",
+      "sha256": "504ee86e8f265b0258093718436d407a299e561f70948040c681befb4fa43342",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    },
+    {
+      "path": "src/server/Foundation.server.luau",
+      "sha256": "065d0e6dd9ba14fa3abd9a88a8bb11c9c671c5ec0180025ef501dc7f0592fe60",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    },
+    {
+      "path": "src/shared/CameraSettings.luau",
+      "sha256": "74e6094e0a0db5b86919b9e6f8f587d902bff2cb67bc84a827fb00353be9daf4",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    },
+    {
+      "path": "src/shared/UnitCatalogue.luau",
+      "sha256": "227fc1f97a366e53ad8c57278720e6b21c26162258c8597fd76dfa4c31b559ad",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    },
+    {
+      "path": "src/shared/ValidateGeometry.luau",
+      "sha256": "71679c8e43699953e6749520b86754bee18b409ae80cee1bae3803185378c48c",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": [
+        "RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."
+      ],
+      "permittedUses": [
+        "roblox-bundle"
+      ]
+    }
+  ]
 }
