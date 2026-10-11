@@ -5,12 +5,21 @@ maintained for **frootz jhklphy**. Intended Roblox owner: `itapita_rules`.
 
 ## Status
 
-This repository contains a Roblox-native presentation foundation: ten original
-primitive-part unit designs, an original island showcase, overhead/3D views and
-a safe-area-aware preview header. A guarded local place export succeeds. It is
-not a playable Roblox game and has not been published to Roblox. Live Studio
-verification is pending because Studio requires the owner to sign in.
-Automated Luau and export checks are not a substitute for engine verification.
+This repository contains a Roblox-native foundation and an early solo conquest
+prototype: ten original primitive-part unit designs, an original island showcase,
+overhead/3D views and a safe-area-aware interface. The solo rules provide server-owned
+territory capture, troop/gold income, a deterministic opponent and match outcomes.
+A guarded local place export succeeds. This is not the complete OpenBack port
+and has not been published to Roblox. Earlier foundation-only local Studio
+playtests verified initialization, both views and stop/restart. Separate engine
+assertions passed for unit assembly and camera transitions/restoration/cleanup.
+Automated Luau/export checks and these fixture tests do not validate full gameplay.
+The preview adapts its layout and hints to PC or touch input, with mouse orbit/zoom
+on desktop and two-finger orbit/pinch zoom on mobile. New responsive layout and
+pinch changes have automated coverage; physical-phone gesture testing remains pending.
+The solo slice also passed Studio remote-order and lifecycle assertions: malformed
+and non-adjacent orders rejected, adjacent capture rendered, exit cleaned the board,
+and restart reset ownership. This does not qualify multiplayer or a complete release.
 Publication remains subject to [LEGAL_REVIEW.md](LEGAL_REVIEW.md).
 
 The Roblox-only replacement direction is recorded in the
@@ -27,7 +36,9 @@ The requested goal is feature and presentation parity with OpenBack, not a
 simplified replacement: existing strategy gameplay, maps, units, multiplayer,
 bots, tutorials, mobile controls, and 2D/3D presentation. The requested Roblox
 monetization is Robux purchases of match gold and subscriptions. These are
-requirements, not implemented features.
+requirements; the solo conquest slice is implemented, but the remaining systems
+and monetization are not yet implemented. Full-match, multiplayer and physical-phone
+release qualification remain pending.
 
 ## Existing source and attribution
 

@@ -18,7 +18,7 @@
     },
     {
       "path": "src/client/CameraController.luau",
-      "sha256": "047106d7c9f14062d5a7c4e54868fa225810e0f78e9fdefec7f5cc2b830fb137",
+      "sha256": "a1d71f6824abd2267e1e418fff224f1b7abff95f08debc13a5fe878eed3fdf57",
       "creator": "frootz jhklphy",
       "origin": "newly-authored",
       "license": "owner-controlled",
@@ -32,7 +32,7 @@
     },
     {
       "path": "src/client/Foundation.client.luau",
-      "sha256": "d7764b93630411e6c9342b5a8844735793c95290062ba538e37881a42bcd901d",
+      "sha256": "5b6a840d579b41b82207f757237fb7353a15b588343b41aaf34880cca79889fd",
       "creator": "frootz jhklphy",
       "origin": "newly-authored",
       "license": "owner-controlled",
@@ -88,7 +88,7 @@
     },
     {
       "path": "src/shared/CameraSettings.luau",
-      "sha256": "74e6094e0a0db5b86919b9e6f8f587d902bff2cb67bc84a827fb00353be9daf4",
+      "sha256": "e53ea3b41014ac1517783b7e4c014affec65f0234178250908832ac30b86c3d0",
       "creator": "frootz jhklphy",
       "origin": "newly-authored",
       "license": "owner-controlled",
@@ -99,6 +99,46 @@
       "permittedUses": [
         "roblox-bundle"
       ]
+    },
+    {
+      "path": "src/client/SoloMatchClient.luau",
+      "sha256": "a8246deba275f061cb546bfd20b0a03d181f8db34ef3ad5598dcc42d99390d56",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": ["RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."],
+      "permittedUses": ["roblox-bundle"]
+    },
+    {
+      "path": "src/shared/MatchRules.luau",
+      "sha256": "c242dc76caab9afadc592b1e347627cdea225dba87305e2e454514b70840f868",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": ["RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."],
+      "permittedUses": ["roblox-bundle"]
+    },
+    {
+      "path": "src/server/SoloMatches.server.luau",
+      "sha256": "815973d028838be84ed6b3a1d6299d32875fe749f4f1b6d8668dd735c9297a71",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": ["RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."],
+      "permittedUses": ["roblox-bundle"]
+    },
+    {
+      "path": "src/shared/DeviceProfile.luau",
+      "sha256": "295417df7623abeaf55a49748769b7c1ea62f8b0be7b5a13666357aa73281cdc",
+      "creator": "frootz jhklphy",
+      "origin": "newly-authored",
+      "license": "owner-controlled",
+      "status": "approved-for-build",
+      "evidence": ["RIGHTS.md: newly authored source in the owner-approved Roblox-only plan."],
+      "permittedUses": ["roblox-bundle"]
     },
     {
       "path": "src/shared/UnitCatalogue.luau",

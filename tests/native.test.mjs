@@ -6,7 +6,7 @@ import { join } from 'node:path';
 const suffix = process.platform === 'win32' ? '.exe' : '';
 const interpreter = join('.tools','luau',`luau${suffix}`);
 const compiler = join('.tools','luau',`luau-compile${suffix}`);
-for (const file of ['tests/geometry.spec.luau','tests/camera.spec.luau']) {
+for (const file of ['tests/geometry.spec.luau','tests/camera.spec.luau','tests/device.spec.luau','tests/match.spec.luau','tests/pointer.spec.luau']) {
   test(`real Luau executes ${file}`, () => {
     const result = spawnSync(interpreter,[file],{encoding:'utf8'});
     assert.ifError(result.error);

@@ -1,8 +1,14 @@
 # OpenBack Roblox: isolated native rebuild
 
 Date: 2026-10-11. Status: owner-approved; presentation foundation authored and
-locally exported. Live Studio verification and the full gameplay port are pending.
+locally exported. Desktop Studio and engine assertions passed; the full gameplay
+port and production-device qualification are pending.
 Project owner: **frootz jhklphy**. Intended Roblox account: `itapita_rules`.
+
+Subsequent owner authorization to continue finishing the port led to an initial
+solo conquest slice: server-owned rules, deterministic opponent, native board and
+device-aware interaction. Studio remote/lifecycle assertions passed. This is an
+incremental prototype, not completion of the later acceptance criteria below.
 
 ## Agreed outcome and boundary
 
