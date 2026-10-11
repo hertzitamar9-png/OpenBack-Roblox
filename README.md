@@ -10,6 +10,14 @@ native runtime, or uploaded game assets yet. Creating this repository does not
 make the browser game compatible with Roblox or clear its rights for Roblox.
 Publication is blocked pending the rights review described in [LEGAL_REVIEW.md](LEGAL_REVIEW.md).
 
+The Roblox-only replacement direction is recorded in the
+[native rebuild design](docs/superpowers/specs/2026-10-11-roblox-only-rebuild-design.md).
+The [initial asset review](docs/asset-review-2026-10-11.md) identifies eight
+attribution-licensed models for replacement and fourteen CC0 candidates for
+further verification. The owner has approved replacements only in the Roblox
+version; the regular OpenBack game remains unchanged. The written design still
+needs review before its implementation plan is prepared.
+
 The requested goal is feature and presentation parity with OpenBack, not a
 simplified replacement: existing strategy gameplay, maps, units, multiplayer,
 bots, tutorials, mobile controls, and 2D/3D presentation. The requested Roblox

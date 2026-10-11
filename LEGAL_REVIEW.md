@@ -28,13 +28,18 @@ performed yet.
 
 ## Platform issue
 
-[Roblox Creator Terms](https://en.help.roblox.com/hc/en-us/articles/115004647846-Roblox-Terms-of-Use),
+[Roblox Creator Terms, May 19, 2026 PDF](https://en.help.roblox.com/hc/en-us/article_attachments/47741686745236),
 section 2(b)(ii), require a broad perpetual license with sublicensing rights for
 uploaded UGC. Section 11 requires the necessary rights to grant that license and
 represents that the use will not require Roblox to obtain licenses, pay third
 parties, or provide third-party attribution. These requirements create an
 unresolved compatibility concern for this project's inherited licenses; this
 document does not assert that every open-source license is prohibited on Roblox.
+
+The live HTML terms page displayed a November 1, 2026 effective date during this
+review, later than the review date. The linked May 19 PDF contains the relevant
+sublicensing and third-party-attribution provisions; the review does not treat
+the future-dated HTML header as proof that those upcoming terms already apply.
 
 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en)
 grants a non-sublicensable license, retains attribution requirements and bars
@@ -55,6 +60,7 @@ must be preserved in any applicable derivative version.
 5. Only after clearance, implement and test the native runtime, purchases,
    subscription entitlements, moderation and publication requirements.
 
-If permissions cannot be obtained, exact reuse cannot be promised. Replacing
-assets or using an independently implemented design would change the user's
-requested scope and must be discussed first, not silently substituted.
+If permissions cannot be obtained, exact reuse cannot be promised. On 2026-10-11,
+the owner approved replacement code and assets exclusively for the Roblox version,
+with the regular OpenBack version left unchanged. That approval is not additional
+permission from third-party rights holders and is not a finding of legal clearance.
