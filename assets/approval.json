@@ -32,7 +32,7 @@
     },
     {
       "path": "src/client/Foundation.client.luau",
-      "sha256": "71276877460a582f31afe9babb6a760ea114dbff5903a0e3614741b66cd3f506",
+      "sha256": "d7764b93630411e6c9342b5a8844735793c95290062ba538e37881a42bcd901d",
       "creator": "frootz jhklphy",
       "origin": "newly-authored",
       "license": "owner-controlled",

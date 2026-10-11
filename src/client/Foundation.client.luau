@@ -46,10 +46,22 @@ if not scene then
 end
 while not workspace.CurrentCamera and gui.Parent do task.wait() end
 if not gui.Parent then return end
-local controller = require(script.Parent:WaitForChild("CameraController")).new()
+local CameraController = require(script.Parent:WaitForChild("CameraController"))
+local controller = CameraController.new()
 status.Text = "Roblox foundation preview — original unit showcase.\nNot a playable match. Created by frootz jhklphy."
 toggle.Text = "Switch to 2D view"; toggle.Active = true; toggle.AutoButtonColor = true
 local mode = "3d"
+local cameraChanged = workspace:GetPropertyChangedSignal("CurrentCamera"):Connect(function()
+  controller:destroy()
+  if workspace.CurrentCamera then
+    controller = CameraController.new()
+    controller:setMode(mode)
+    toggle.Active = true; toggle.AutoButtonColor = true
+    toggle.Text = if mode == "3d" then "Switch to 2D view" else "Switch to 3D view"
+  else
+    toggle.Active = false; toggle.AutoButtonColor = false; toggle.Text = "Waiting for camera..."
+  end
+end)
 local activated = toggle.Activated:Connect(function()
   if controller.destroyed then return end
   mode = if mode == "3d" then "overhead" else "3d"
@@ -58,5 +70,5 @@ local activated = toggle.Activated:Connect(function()
 end)
 local cleanup
 cleanup = gui.Destroying:Connect(function()
-  activated:Disconnect(); controller:destroy(); cleanup:Disconnect()
+  activated:Disconnect(); cameraChanged:Disconnect(); controller:destroy(); cleanup:Disconnect()
 end)

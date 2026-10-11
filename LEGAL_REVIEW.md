@@ -9,6 +9,11 @@ Do not upload the existing code or assets to Roblox until the required rights
 are verified. Public source on GitHub is not proof of the rights needed to grant
 Roblox its platform license. The original OpenBack checkout remains unchanged.
 
+The first native foundation now contains newly authored Luau and primitive-part
+designs only, with no inherited media imported. Its hash-based bundle gate is an
+engineering safeguard, not legal clearance; see [RIGHTS.md](RIGHTS.md). This
+limited source implementation does not resolve rights questions for the full port.
+
 ## Findings
 
 | Material | Existing record | Required next check |

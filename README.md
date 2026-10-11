@@ -5,18 +5,23 @@ maintained for **frootz jhklphy**. Intended Roblox owner: `itapita_rules`.
 
 ## Status
 
-This repository is not a playable Roblox game and contains no Roblox place,
-native runtime, or uploaded game assets yet. Creating this repository does not
-make the browser game compatible with Roblox or clear its rights for Roblox.
-Publication is blocked pending the rights review described in [LEGAL_REVIEW.md](LEGAL_REVIEW.md).
+This repository contains a Roblox-native presentation foundation: ten original
+primitive-part unit designs, an original island showcase, overhead/3D views and
+a safe-area-aware preview header. A guarded local place export succeeds. It is
+not a playable Roblox game and has not been published to Roblox. Live Studio
+verification is pending because Studio requires the owner to sign in.
+Automated Luau and export checks are not a substitute for engine verification.
+Publication remains subject to [LEGAL_REVIEW.md](LEGAL_REVIEW.md).
 
 The Roblox-only replacement direction is recorded in the
 [native rebuild design](docs/superpowers/specs/2026-10-11-roblox-only-rebuild-design.md).
 The [initial asset review](docs/asset-review-2026-10-11.md) identifies eight
 attribution-licensed models for replacement and fourteen CC0 candidates for
 further verification. The owner has approved replacements only in the Roblox
-version; the regular OpenBack game remains unchanged. The written design still
-needs review before its implementation plan is prepared.
+version; the regular OpenBack game remains unchanged. The owner approved the
+design and first foundation implementation stage. [RIGHTS.md](RIGHTS.md) and
+the per-file approval manifest distinguish newly authored source from imports;
+no inherited images, meshes, maps, sounds or fonts are bundled in this stage.
 
 The requested goal is feature and presentation parity with OpenBack, not a
 simplified replacement: existing strategy gameplay, maps, units, multiplayer,

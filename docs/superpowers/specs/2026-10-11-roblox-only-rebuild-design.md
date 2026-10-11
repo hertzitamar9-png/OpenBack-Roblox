@@ -1,6 +1,7 @@
 # OpenBack Roblox: isolated native rebuild
 
-Date: 2026-10-11. Status: written design awaiting review; not implemented.
+Date: 2026-10-11. Status: owner-approved; presentation foundation authored and
+locally exported. Live Studio verification and the full gameplay port are pending.
 Project owner: **frootz jhklphy**. Intended Roblox account: `itapita_rules`.
 
 ## Agreed outcome and boundary
